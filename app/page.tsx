@@ -914,14 +914,14 @@ export default function DanielsCohrLanding() {
                     background: "rgba(255, 255, 255, 0.1)",
                     backdropFilter: "blur(10px)",
                   }}
-                  onMouseEnter={(e) => {
-                    e.target.style.background = "rgba(255, 255, 255, 0.2)";
-                    e.target.style.transform = "translateY(-2px)";
-                  }}
-                  onMouseLeave={(e) => {
-                    e.target.style.background = "rgba(255, 255, 255, 0.1)";
-                    e.target.style.transform = "translateY(0)";
-                  }}
+                  // onMouseEnter={(e) => {
+                  //   e.target.style.background = "rgba(255, 255, 255, 0.2)";
+                  //   e.target.style.transform = "translateY(-2px)";
+                  // }}
+                  // onMouseLeave={(e) => {
+                  //   e.target.style.background = "rgba(255, 255, 255, 0.1)";
+                  //   e.target.style.transform = "translateY(0)";
+                  // }}
                 >
                   {item}
                 </a>
@@ -968,16 +968,16 @@ export default function DanielsCohrLanding() {
                     boxShadow: "0 8px 32px rgba(255, 69, 0, 0.3)",
                     transition: "all 0.3s ease",
                   }}
-                  onMouseEnter={(e) => {
-                    e.target.style.transform = "translateY(-3px)";
-                    e.target.style.boxShadow =
-                      "0 12px 40px rgba(255, 69, 0, 0.4)";
-                  }}
-                  onMouseLeave={(e) => {
-                    e.target.style.transform = "translateY(0)";
-                    e.target.style.boxShadow =
-                      "0 8px 32px rgba(255, 69, 0, 0.3)";
-                  }}
+                  // onMouseEnter={(e) => {
+                  //   e.target.style.transform = "translateY(-3px)";
+                  //   e.target.style.boxShadow =
+                  //     "0 12px 40px rgba(255, 69, 0, 0.4)";
+                  // }}
+                  // onMouseLeave={(e) => {
+                  //   e.target.style.transform = "translateY(0)";
+                  //   e.target.style.boxShadow =
+                  //     "0 8px 32px rgba(255, 69, 0, 0.3)";
+                  // }}
                 >
                   Start Your Transformation <ArrowRight className="w-5 h-5" />
                 </button>
@@ -989,14 +989,14 @@ export default function DanielsCohrLanding() {
                     border: "1px solid rgba(255, 255, 255, 0.3)",
                     transition: "all 0.3s ease",
                   }}
-                  onMouseEnter={(e) => {
-                    e.target.style.background = "rgba(255, 255, 255, 0.2)";
-                    e.target.style.transform = "translateY(-2px)";
-                  }}
-                  onMouseLeave={(e) => {
-                    e.target.style.background = "rgba(255, 255, 255, 0.1)";
-                    e.target.style.transform = "translateY(0)";
-                  }}
+                  // onMouseEnter={(e) => {
+                  //   e.target.style.background = "rgba(255, 255, 255, 0.2)";
+                  //   e.target.style.transform = "translateY(-2px)";
+                  // }}
+                  // onMouseLeave={(e) => {
+                  //   e.target.style.background = "rgba(255, 255, 255, 0.1)";
+                  //   e.target.style.transform = "translateY(0)";
+                  // }}
                 >
                   Learn More
                 </button>
@@ -1096,17 +1096,17 @@ export default function DanielsCohrLanding() {
                   boxShadow: "0 8px 32px rgba(0, 0, 0, 0.1)",
                   transition: "all 0.3s ease",
                 }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.transform =
-                    "translateY(-10px) scale(1.02)";
-                  e.currentTarget.style.boxShadow =
-                    "0 25px 60px rgba(255, 69, 0, 0.15)";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.transform = "translateY(0) scale(1)";
-                  e.currentTarget.style.boxShadow =
-                    "0 8px 32px rgba(0, 0, 0, 0.1)";
-                }}
+                // onMouseEnter={(e) => {
+                //   e.currentTarget.style.transform =
+                //     "translateY(-10px) scale(1.02)";
+                //   e.currentTarget.style.boxShadow =
+                //     "0 25px 60px rgba(255, 69, 0, 0.15)";
+                // }}
+                // onMouseLeave={(e) => {
+                //   e.currentTarget.style.transform = "translateY(0) scale(1)";
+                //   e.currentTarget.style.boxShadow =
+                //     "0 8px 32px rgba(0, 0, 0, 0.1)";
+                // }}
               >
                 <div
                   className="d-inline-flex p-4 rounded-4 mb-4"
@@ -1135,14 +1135,14 @@ export default function DanielsCohrLanding() {
                       border: "2px solid rgba(255, 255, 255, 0.3)",
                       transition: "all 0.3s ease",
                     }}
-                    onMouseEnter={(e) => {
-                      e.target.style.background = "rgba(255, 69, 0, 0.2)";
-                      e.target.style.borderColor = "#ff4500";
-                    }}
-                    onMouseLeave={(e) => {
-                      e.target.style.background = "transparent";
-                      e.target.style.borderColor = "rgba(255, 255, 255, 0.3)";
-                    }}
+                    // onMouseEnter={(e) => {
+                    //   e.target.style.background = "rgba(255, 69, 0, 0.2)";
+                    //   e.target.style.borderColor = "#ff4500";
+                    // }}
+                    // onMouseLeave={(e) => {
+                    //   e.target.style.background = "transparent";
+                    //   e.target.style.borderColor = "rgba(255, 255, 255, 0.3)";
+                    // }}
                   >
                     Explore Service
                   </button>
@@ -1160,17 +1160,17 @@ export default function DanielsCohrLanding() {
                   boxShadow: "0 8px 32px rgba(0, 0, 0, 0.1)",
                   transition: "all 0.3s ease",
                 }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.transform =
-                    "translateY(-10px) scale(1.02)";
-                  e.currentTarget.style.boxShadow =
-                    "0 25px 60px rgba(247, 147, 30, 0.15)";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.transform = "translateY(0) scale(1)";
-                  e.currentTarget.style.boxShadow =
-                    "0 8px 32px rgba(0, 0, 0, 0.1)";
-                }}
+                // onMouseEnter={(e) => {
+                //   e.currentTarget.style.transform =
+                //     "translateY(-10px) scale(1.02)";
+                //   e.currentTarget.style.boxShadow =
+                //     "0 25px 60px rgba(247, 147, 30, 0.15)";
+                // }}
+                // onMouseLeave={(e) => {
+                //   e.currentTarget.style.transform = "translateY(0) scale(1)";
+                //   e.currentTarget.style.boxShadow =
+                //     "0 8px 32px rgba(0, 0, 0, 0.1)";
+                // }}
               >
                 <div
                   className="d-inline-flex p-4 rounded-4 mb-4"
@@ -1200,14 +1200,14 @@ export default function DanielsCohrLanding() {
                       border: "2px solid rgba(255, 255, 255, 0.3)",
                       transition: "all 0.3s ease",
                     }}
-                    onMouseEnter={(e) => {
-                      e.target.style.background = "rgba(247, 147, 30, 0.2)";
-                      e.target.style.borderColor = "#f7931e";
-                    }}
-                    onMouseLeave={(e) => {
-                      e.target.style.background = "transparent";
-                      e.target.style.borderColor = "rgba(255, 255, 255, 0.3)";
-                    }}
+                    // onMouseEnter={(e) => {
+                    //   e.target.style.background = "rgba(247, 147, 30, 0.2)";
+                    //   e.target.style.borderColor = "#f7931e";
+                    // }}
+                    // onMouseLeave={(e) => {
+                    //   e.target.style.background = "transparent";
+                    //   e.target.style.borderColor = "rgba(255, 255, 255, 0.3)";
+                    // }}
                   >
                     Explore Service
                   </button>
@@ -1225,17 +1225,17 @@ export default function DanielsCohrLanding() {
                   boxShadow: "0 8px 32px rgba(0, 0, 0, 0.1)",
                   transition: "all 0.3s ease",
                 }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.transform =
-                    "translateY(-10px) scale(1.02)";
-                  e.currentTarget.style.boxShadow =
-                    "0 25px 60px rgba(255, 107, 53, 0.15)";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.transform = "translateY(0) scale(1)";
-                  e.currentTarget.style.boxShadow =
-                    "0 8px 32px rgba(0, 0, 0, 0.1)";
-                }}
+                // onMouseEnter={(e) => {
+                //   e.currentTarget.style.transform =
+                //     "translateY(-10px) scale(1.02)";
+                //   e.currentTarget.style.boxShadow =
+                //     "0 25px 60px rgba(255, 107, 53, 0.15)";
+                // }}
+                // onMouseLeave={(e) => {
+                //   e.currentTarget.style.transform = "translateY(0) scale(1)";
+                //   e.currentTarget.style.boxShadow =
+                //     "0 8px 32px rgba(0, 0, 0, 0.1)";
+                // }}
               >
                 <div
                   className="d-inline-flex p-4 rounded-4 mb-4"
@@ -1265,14 +1265,14 @@ export default function DanielsCohrLanding() {
                       border: "2px solid rgba(255, 255, 255, 0.3)",
                       transition: "all 0.3s ease",
                     }}
-                    onMouseEnter={(e) => {
-                      e.target.style.background = "rgba(255, 107, 53, 0.2)";
-                      e.target.style.borderColor = "#ff6b35";
-                    }}
-                    onMouseLeave={(e) => {
-                      e.target.style.background = "transparent";
-                      e.target.style.borderColor = "rgba(255, 255, 255, 0.3)";
-                    }}
+                    // onMouseEnter={(e) => {
+                    //   e.target.style.background = "rgba(255, 107, 53, 0.2)";
+                    //   e.target.style.borderColor = "#ff6b35";
+                    // }}
+                    // onMouseLeave={(e) => {
+                    //   e.target.style.background = "transparent";
+                    //   e.target.style.borderColor = "rgba(255, 255, 255, 0.3)";
+                    // }}
                   >
                     Explore Service
                   </button>
@@ -1316,16 +1316,16 @@ export default function DanielsCohrLanding() {
                     transition: "all 0.3s ease",
                     cursor: "pointer",
                   }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = "translateY(-8px)";
-                    e.currentTarget.style.boxShadow =
-                      "0 20px 60px rgba(0, 0, 0, 0.2)";
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.transform = "translateY(0)";
-                    e.currentTarget.style.boxShadow =
-                      "0 8px 32px rgba(0, 0, 0, 0.1)";
-                  }}
+                  // onMouseEnter={(e) => {
+                  //   e.currentTarget.style.transform = "translateY(-8px)";
+                  //   e.currentTarget.style.boxShadow =
+                  //     "0 20px 60px rgba(0, 0, 0, 0.2)";
+                  // }}
+                  // onMouseLeave={(e) => {
+                  //   e.currentTarget.style.transform = "translateY(0)";
+                  //   e.currentTarget.style.boxShadow =
+                  //     "0 8px 32px rgba(0, 0, 0, 0.1)";
+                  // }}
                 >
                   <div
                     className="d-inline-flex p-3 rounded-3 mb-4"
