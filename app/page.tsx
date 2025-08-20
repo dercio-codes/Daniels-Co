@@ -770,14 +770,13 @@ import {
   Mail,
   Phone,
   MapPin,
-  CheckCircle,
   Star,
 } from "lucide-react";
 import Image from "next/image";
 
 export default function DanielsCohrLanding() {
   const [isVisible, setIsVisible] = useState(false);
-  const [activeService, setActiveService] = useState(0);
+  // const [activeService, setActiveService] = useState(0);
 
   useEffect(() => {
     setIsVisible(true);
@@ -1436,7 +1435,7 @@ export default function DanielsCohrLanding() {
                 Ready to Transform?
               </h2>
               <p className="fs-5 text-light mb-5">
-                Let's discuss how we can unlock the potential within your
+                Let&apos;s discuss how we can unlock the potential within your
                 organization and create sustainable growth together.
               </p>
               <div className="d-flex flex-column gap-3">
