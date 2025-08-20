@@ -1512,7 +1512,7 @@ export default function DanielsCohrLanding() {
                   <div className="mb-4">
                     <textarea
                       className="form-control rounded-3 p-3"
-                      rows="4"
+                      rows={4}
                       placeholder="Tell us about your organization's needs..."
                       style={{
                         background: "rgba(255, 255, 255, 0.1)",
