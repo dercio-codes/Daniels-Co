@@ -1402,8 +1402,11 @@ export default function DanielsCohrLanding() {
                       />
                     ))}
                   </div>
-                  <p className="mb-4 text-light" style={{ lineHeight: "1.6" }}>
-                    "{testimonial.content}"
+                  <p
+                    className="mb-4 text-light"
+                    style={{ lineHeight: "1.6", fontStyle: "italic" }}
+                  >
+                    {testimonial.content}
                   </p>
                   <div>
                     <div className="fw-bold">{testimonial.name}</div>
