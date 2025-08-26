@@ -759,24 +759,882 @@
 //   );
 // }
 
-import React, { useState, useEffect } from "react";
-import {
-  ArrowRight,
-  Users,
-  TrendingUp,
-  Heart,
-  Brain,
-  Hand,
-  Mail,
-  Phone,
-  MapPin,
-  Star,
-} from "lucide-react";
-import Image from "next/image";
+// import React, { useState, useEffect } from "react";
+// import {
+//   ArrowRight,
+//   Users,
+//   TrendingUp,
+//   Heart,
+//   Brain,
+//   Hand,
+//   Mail,
+//   Phone,
+//   MapPin,
+//   Star,
+// } from "lucide-react";
+// import Image from "next/image";
+
+// export default function DanielsCohrLanding() {
+//   const [isVisible, setIsVisible] = useState(false);
+//   // const [activeService, setActiveService] = useState(0);
+
+//   useEffect(() => {
+//     setIsVisible(true);
+//   }, []);
+
+//   const services = [
+//     {
+//       icon: <Users className="w-8 h-8" />,
+//       title: "Executive Search and Recruitment",
+//       description:
+//         "Find and attract top-tier executive talent through our comprehensive search process. We identify leaders who align with your culture and drive transformational growth.",
+//       color: "from-orange-500 to-red-500",
+//     },
+//     {
+//       icon: <Heart className="w-8 h-8" />,
+//       title: "Human Capital Business Partnering Outsourcing",
+//       description:
+//         "Strategic HR partnership services that integrate seamlessly with your business operations, providing expert guidance and execution for all your human capital needs.",
+//       color: "from-yellow-500 to-orange-500",
+//     },
+//     {
+//       icon: <TrendingUp className="w-8 h-8" />,
+//       title: "Leadership Development and Coaching",
+//       description:
+//         "Comprehensive leadership programs and personalized coaching that unlock potential, enhance performance, and create sustainable organizational impact.",
+//       color: "from-red-500 to-orange-500",
+//     },
+//   ];
+
+//   const testimonials = [
+//     {
+//       name: "Sarah Mitchell",
+//       role: "CEO, TechInnovate",
+//       content:
+//         "Daniels Cohr transformed our leadership approach. The results were immediate and sustainable.",
+//       rating: 5,
+//     },
+//     {
+//       name: "Marcus Chen",
+//       role: "HR Director, GlobalCorp",
+//       content:
+//         "Their human-centered approach to consulting delivered exceptional organizational growth.",
+//       rating: 5,
+//     },
+//     {
+//       name: "Lisa Rodriguez",
+//       role: "Founder, GrowthLab",
+//       content:
+//         "The team's expertise in unlocking human potential is unmatched in the industry.",
+//       rating: 5,
+//     },
+//   ];
+
+//   return (
+//     <div
+//       className="min-h-screen text-white overflow-hidden"
+//       style={{
+//         background:
+//           "linear-gradient(135deg, #ff6b35 0%, #f7931e 50%, #ff4500 100%)",
+//         fontFamily:
+//           "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+//       }}
+//     >
+//       {/* Animated Background Elements */}
+//       <div className="fixed inset-0 overflow-hidden pointer-events-none">
+//         <div
+//           className="absolute w-96 h-96 rounded-full opacity-20"
+//           style={{
+//             background: "linear-gradient(45deg, #ff6b35, #f7931e)",
+//             top: "-10%",
+//             right: "-10%",
+//             animation: "float 6s ease-in-out infinite",
+//           }}
+//         />
+//         <div
+//           className="absolute w-80 h-80 rounded-full opacity-15"
+//           style={{
+//             background: "linear-gradient(45deg, #ff4500, #ff6b35)",
+//             bottom: "-10%",
+//             left: "-10%",
+//             animation: "float 8s ease-in-out infinite reverse",
+//           }}
+//         />
+//         <div
+//           className="absolute w-64 h-64 rounded-full opacity-10"
+//           style={{
+//             background: "linear-gradient(45deg, #f7931e, #ffab00)",
+//             top: "30%",
+//             left: "70%",
+//             animation: "float 10s ease-in-out infinite",
+//           }}
+//         />
+//       </div>
+
+//       {/* Navigation */}
+//       <nav
+//         className="fixed top-0 w-full z-50 py-4 px-6"
+//         style={{
+//           background: "rgba(255, 255, 255, 0.1)",
+//           backdropFilter: "blur(20px)",
+//           borderBottom: "1px solid rgba(255, 255, 255, 0.2)",
+//         }}
+//       >
+//         <div className="container mx-auto d-flex justify-content-between align-items-center">
+//           <div
+//             className="fw-bold fs-3 d-flex align-items-center gap-3"
+//             style={{
+//               background: "linear-gradient(45deg, #fff, #ffe0b8)",
+//               WebkitBackgroundClip: "text",
+//               WebkitTextFillColor: "transparent",
+//               backgroundClip: "text",
+//             }}
+//           >
+//             <Image
+//               src="/logo-no-background.png" // Path relative to the public folder
+//               alt="Pointer"
+//               width={40}
+//               height={40}
+//             />
+//             Daniels & Co
+//           </div>
+//           <div className="d-none d-md-flex gap-4">
+//             {["Services", "Solutions", "Testimonials", "Contact"].map(
+//               (item, index) => (
+//                 <a
+//                   key={index}
+//                   href={
+//                     item === "Solutions"
+//                       ? "#services"
+//                       : `#${item.toLowerCase()}`
+//                   }
+//                   className="text-white text-decoration-none px-3 py-2 rounded-3"
+//                   style={{
+//                     transition: "all 0.3s ease",
+//                     background: "rgba(255, 255, 255, 0.1)",
+//                     backdropFilter: "blur(10px)",
+//                   }}
+//                   // onMouseEnter={(e) => {
+//                   //   e.target.style.background = "rgba(255, 255, 255, 0.2)";
+//                   //   e.target.style.transform = "translateY(-2px)";
+//                   // }}
+//                   // onMouseLeave={(e) => {
+//                   //   e.target.style.background = "rgba(255, 255, 255, 0.1)";
+//                   //   e.target.style.transform = "translateY(0)";
+//                   // }}
+//                 >
+//                   {item}
+//                 </a>
+//               )
+//             )}
+//           </div>
+//         </div>
+//       </nav>
+
+//       {/* Hero Section */}
+//       <section className="container mx-auto px-6 pt-32 pb-20">
+//         <div className="row align-items-center min-vh-100">
+//           <div className="col-lg-6">
+//             <div
+//               className={`transition-all duration-1000 ${
+//                 isVisible
+//                   ? "opacity-100 translate-y-0"
+//                   : "opacity-0 translate-y-12"
+//               }`}
+//             >
+//               <h1
+//                 className="display-2 fw-bold mb-4"
+//                 style={{
+//                   background: "linear-gradient(45deg, #fff, #ffe0b8, #ffcc80)",
+//                   WebkitBackgroundClip: "text",
+//                   WebkitTextFillColor: "transparent",
+//                   backgroundClip: "text",
+//                   lineHeight: "1.2",
+//                 }}
+//               >
+//                 Inspire. Grow. Ignite.
+//               </h1>
+//               <p className="fs-4 mb-5 text-light" style={{ lineHeight: "1.6" }}>
+//                 We unlock the potential within your people, transforming heads,
+//                 hearts, and hands to create sustainable, thriving organizations
+//                 that lead the future.
+//               </p>
+//               <div className="d-flex flex-column flex-md-row gap-3">
+//                 <button
+//                   className="btn btn-lg px-5 py-3 rounded-pill text-white fw-semibold d-flex align-items-center justify-content-center gap-2"
+//                   style={{
+//                     background: "linear-gradient(45deg, #ff4500, #ff6b35)",
+//                     border: "none",
+//                     boxShadow: "0 8px 32px rgba(255, 69, 0, 0.3)",
+//                     transition: "all 0.3s ease",
+//                   }}
+//                   // onMouseEnter={(e) => {
+//                   //   e.target.style.transform = "translateY(-3px)";
+//                   //   e.target.style.boxShadow =
+//                   //     "0 12px 40px rgba(255, 69, 0, 0.4)";
+//                   // }}
+//                   // onMouseLeave={(e) => {
+//                   //   e.target.style.transform = "translateY(0)";
+//                   //   e.target.style.boxShadow =
+//                   //     "0 8px 32px rgba(255, 69, 0, 0.3)";
+//                   // }}
+//                 >
+//                   Start Your Transformation <ArrowRight className="w-5 h-5" />
+//                 </button>
+//                 <button
+//                   className="btn btn-lg btn-outline-light px-5 py-3 rounded-pill fw-semibold"
+//                   style={{
+//                     background: "rgba(255, 255, 255, 0.1)",
+//                     backdropFilter: "blur(10px)",
+//                     border: "1px solid rgba(255, 255, 255, 0.3)",
+//                     transition: "all 0.3s ease",
+//                   }}
+//                   // onMouseEnter={(e) => {
+//                   //   e.target.style.background = "rgba(255, 255, 255, 0.2)";
+//                   //   e.target.style.transform = "translateY(-2px)";
+//                   // }}
+//                   // onMouseLeave={(e) => {
+//                   //   e.target.style.background = "rgba(255, 255, 255, 0.1)";
+//                   //   e.target.style.transform = "translateY(0)";
+//                   // }}
+//                 >
+//                   Learn More
+//                 </button>
+//               </div>
+//             </div>
+//           </div>
+//           <div className="col-lg-6 mt-5 mt-lg-0">
+//             <div
+//               className="position-relative"
+//               style={{
+//                 transform: `translateY(${isVisible ? "0" : "50px"})`,
+//                 opacity: isVisible ? 1 : 0,
+//                 transition: "all 1s ease 0.3s",
+//               }}
+//             >
+//               <div
+//                 className="rounded-4 p-5 text-center"
+//                 style={{
+//                   background: "rgba(255, 255, 255, 0.1)",
+//                   backdropFilter: "blur(20px)",
+//                   border: "1px solid rgba(255, 255, 255, 0.2)",
+//                   boxShadow: "0 8px 32px rgba(0, 0, 0, 0.1)",
+//                 }}
+//               >
+//                 <div className="row g-4">
+//                   <div className="col-4">
+//                     <div
+//                       className="p-4 rounded-3 text-center"
+//                       style={{
+//                         background: "linear-gradient(45deg, #ff4500, #ff6b35)",
+//                         boxShadow: "0 4px 20px rgba(255, 69, 0, 0.3)",
+//                       }}
+//                     >
+//                       <Brain className="w-12 h-12 mx-auto mb-2" />
+//                       <div className="fw-bold">Think</div>
+//                     </div>
+//                   </div>
+//                   <div className="col-4">
+//                     <div
+//                       className="p-4 rounded-3 text-center"
+//                       style={{
+//                         background: "linear-gradient(45deg, #f7931e, #ffab00)",
+//                         boxShadow: "0 4px 20px rgba(247, 147, 30, 0.3)",
+//                       }}
+//                     >
+//                       <Heart className="w-12 h-12 mx-auto mb-2" />
+//                       <div className="fw-bold">Feel</div>
+//                     </div>
+//                   </div>
+//                   <div className="col-4">
+//                     <div
+//                       className="p-4 rounded-3 text-center"
+//                       style={{
+//                         background: "linear-gradient(45deg, #ff6b35, #f7931e)",
+//                         boxShadow: "0 4px 20px rgba(255, 107, 53, 0.3)",
+//                       }}
+//                     >
+//                       <Hand className="w-12 h-12 mx-auto mb-2" />
+//                       <div className="fw-bold">Act</div>
+//                     </div>
+//                   </div>
+//                 </div>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* Key Services Highlight Section */}
+//       <section className="py-20">
+//         <div className="container mx-auto px-6">
+//           <div className="text-center mb-16">
+//             <h2
+//               className="display-4 fw-bold mb-4"
+//               style={{
+//                 background: "linear-gradient(45deg, #fff, #ffe0b8)",
+//                 WebkitBackgroundClip: "text",
+//                 WebkitTextFillColor: "transparent",
+//                 backgroundClip: "text",
+//               }}
+//             >
+//               Core Services
+//             </h2>
+//             <p className="fs-5 text-light">
+//               Specialized solutions for your human capital needs
+//             </p>
+//           </div>
+
+//           <div className="row g-5">
+//             <div className="col-lg-4">
+//               <div
+//                 className="text-center p-6 rounded-4 h-100"
+//                 style={{
+//                   background: "rgba(255, 255, 255, 0.1)",
+//                   backdropFilter: "blur(20px)",
+//                   border: "1px solid rgba(255, 255, 255, 0.2)",
+//                   boxShadow: "0 8px 32px rgba(0, 0, 0, 0.1)",
+//                   transition: "all 0.3s ease",
+//                 }}
+//                 // onMouseEnter={(e) => {
+//                 //   e.currentTarget.style.transform =
+//                 //     "translateY(-10px) scale(1.02)";
+//                 //   e.currentTarget.style.boxShadow =
+//                 //     "0 25px 60px rgba(255, 69, 0, 0.15)";
+//                 // }}
+//                 // onMouseLeave={(e) => {
+//                 //   e.currentTarget.style.transform = "translateY(0) scale(1)";
+//                 //   e.currentTarget.style.boxShadow =
+//                 //     "0 8px 32px rgba(0, 0, 0, 0.1)";
+//                 // }}
+//               >
+//                 <div
+//                   className="d-inline-flex p-4 rounded-4 mb-4"
+//                   style={{
+//                     background: "linear-gradient(45deg, #ff4500, #ff6b35)",
+//                     boxShadow: "0 8px 25px rgba(255, 69, 0, 0.3)",
+//                   }}
+//                 >
+//                   <Users className="w-12 h-12" />
+//                 </div>
+//                 <h3
+//                   className="fw-bold mb-4 text-uppercase fs-5"
+//                   style={{ letterSpacing: "1px" }}
+//                 >
+//                   Executive Search & Recruitment
+//                 </h3>
+//                 <p className="text-light mb-4" style={{ lineHeight: "1.7" }}>
+//                   Strategic talent acquisition for C-suite and senior leadership
+//                   positions. We identify and attract exceptional leaders who
+//                   drive organizational transformation and sustainable growth.
+//                 </p>
+//                 <div className="d-flex justify-content-center">
+//                   <button
+//                     className="btn btn-outline-light px-4 py-2 rounded-pill"
+//                     style={{
+//                       border: "2px solid rgba(255, 255, 255, 0.3)",
+//                       transition: "all 0.3s ease",
+//                     }}
+//                     // onMouseEnter={(e) => {
+//                     //   e.target.style.background = "rgba(255, 69, 0, 0.2)";
+//                     //   e.target.style.borderColor = "#ff4500";
+//                     // }}
+//                     // onMouseLeave={(e) => {
+//                     //   e.target.style.background = "transparent";
+//                     //   e.target.style.borderColor = "rgba(255, 255, 255, 0.3)";
+//                     // }}
+//                   >
+//                     Explore Service
+//                   </button>
+//                 </div>
+//               </div>
+//             </div>
+
+//             <div className="col-lg-4">
+//               <div
+//                 className="text-center p-6 rounded-4 h-100"
+//                 style={{
+//                   background: "rgba(255, 255, 255, 0.1)",
+//                   backdropFilter: "blur(20px)",
+//                   border: "1px solid rgba(255, 255, 255, 0.2)",
+//                   boxShadow: "0 8px 32px rgba(0, 0, 0, 0.1)",
+//                   transition: "all 0.3s ease",
+//                 }}
+//                 // onMouseEnter={(e) => {
+//                 //   e.currentTarget.style.transform =
+//                 //     "translateY(-10px) scale(1.02)";
+//                 //   e.currentTarget.style.boxShadow =
+//                 //     "0 25px 60px rgba(247, 147, 30, 0.15)";
+//                 // }}
+//                 // onMouseLeave={(e) => {
+//                 //   e.currentTarget.style.transform = "translateY(0) scale(1)";
+//                 //   e.currentTarget.style.boxShadow =
+//                 //     "0 8px 32px rgba(0, 0, 0, 0.1)";
+//                 // }}
+//               >
+//                 <div
+//                   className="d-inline-flex p-4 rounded-4 mb-4"
+//                   style={{
+//                     background: "linear-gradient(45deg, #f7931e, #ffab00)",
+//                     boxShadow: "0 8px 25px rgba(247, 147, 30, 0.3)",
+//                   }}
+//                 >
+//                   <Heart className="w-12 h-12" />
+//                 </div>
+//                 <h3
+//                   className="fw-bold mb-4 text-uppercase fs-5"
+//                   style={{ letterSpacing: "1px" }}
+//                 >
+//                   Human Capital Business Partnering Outsourcing
+//                 </h3>
+//                 <p className="text-light mb-4" style={{ lineHeight: "1.7" }}>
+//                   Comprehensive HR outsourcing solutions that integrate with
+//                   your business strategy. From talent management to
+//                   organizational development, we become your strategic HR
+//                   partner.
+//                 </p>
+//                 <div className="d-flex justify-content-center">
+//                   <button
+//                     className="btn btn-outline-light px-4 py-2 rounded-pill"
+//                     style={{
+//                       border: "2px solid rgba(255, 255, 255, 0.3)",
+//                       transition: "all 0.3s ease",
+//                     }}
+//                     // onMouseEnter={(e) => {
+//                     //   e.target.style.background = "rgba(247, 147, 30, 0.2)";
+//                     //   e.target.style.borderColor = "#f7931e";
+//                     // }}
+//                     // onMouseLeave={(e) => {
+//                     //   e.target.style.background = "transparent";
+//                     //   e.target.style.borderColor = "rgba(255, 255, 255, 0.3)";
+//                     // }}
+//                   >
+//                     Explore Service
+//                   </button>
+//                 </div>
+//               </div>
+//             </div>
+
+//             <div className="col-lg-4">
+//               <div
+//                 className="text-center p-6 rounded-4 h-100"
+//                 style={{
+//                   background: "rgba(255, 255, 255, 0.1)",
+//                   backdropFilter: "blur(20px)",
+//                   border: "1px solid rgba(255, 255, 255, 0.2)",
+//                   boxShadow: "0 8px 32px rgba(0, 0, 0, 0.1)",
+//                   transition: "all 0.3s ease",
+//                 }}
+//                 // onMouseEnter={(e) => {
+//                 //   e.currentTarget.style.transform =
+//                 //     "translateY(-10px) scale(1.02)";
+//                 //   e.currentTarget.style.boxShadow =
+//                 //     "0 25px 60px rgba(255, 107, 53, 0.15)";
+//                 // }}
+//                 // onMouseLeave={(e) => {
+//                 //   e.currentTarget.style.transform = "translateY(0) scale(1)";
+//                 //   e.currentTarget.style.boxShadow =
+//                 //     "0 8px 32px rgba(0, 0, 0, 0.1)";
+//                 // }}
+//               >
+//                 <div
+//                   className="d-inline-flex p-4 rounded-4 mb-4"
+//                   style={{
+//                     background: "linear-gradient(45deg, #ff6b35, #f7931e)",
+//                     boxShadow: "0 8px 25px rgba(255, 107, 53, 0.3)",
+//                   }}
+//                 >
+//                   <TrendingUp className="w-12 h-12" />
+//                 </div>
+//                 <h3
+//                   className="fw-bold mb-4 text-uppercase fs-5"
+//                   style={{ letterSpacing: "1px" }}
+//                 >
+//                   Leadership Development & Coaching
+//                 </h3>
+//                 <p className="text-light mb-4" style={{ lineHeight: "1.7" }}>
+//                   Personalized leadership development programs and executive
+//                   coaching that unlock potential, enhance performance, and
+//                   create lasting organizational impact through transformational
+//                   leadership.
+//                 </p>
+//                 <div className="d-flex justify-content-center">
+//                   <button
+//                     className="btn btn-outline-light px-4 py-2 rounded-pill"
+//                     style={{
+//                       border: "2px solid rgba(255, 255, 255, 0.3)",
+//                       transition: "all 0.3s ease",
+//                     }}
+//                     // onMouseEnter={(e) => {
+//                     //   e.target.style.background = "rgba(255, 107, 53, 0.2)";
+//                     //   e.target.style.borderColor = "#ff6b35";
+//                     // }}
+//                     // onMouseLeave={(e) => {
+//                     //   e.target.style.background = "transparent";
+//                     //   e.target.style.borderColor = "rgba(255, 255, 255, 0.3)";
+//                     // }}
+//                   >
+//                     Explore Service
+//                   </button>
+//                 </div>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* Services Section */}
+//       <section id="services" className="py-20">
+//         <div className="container mx-auto px-6">
+//           <div className="text-center mb-16">
+//             <h2
+//               className="display-4 fw-bold mb-4"
+//               style={{
+//                 background: "linear-gradient(45deg, #fff, #ffe0b8)",
+//                 WebkitBackgroundClip: "text",
+//                 WebkitTextFillColor: "transparent",
+//                 backgroundClip: "text",
+//               }}
+//             >
+//               Our Services
+//             </h2>
+//             <p className="fs-5 text-light">
+//               Comprehensive solutions to transform your organization
+//             </p>
+//           </div>
+
+//           <div className="row g-4 justify-content-center">
+//             {services.map((service, index) => (
+//               <div key={index} className="col-lg-4 col-md-6">
+//                 <div
+//                   className="h-100 p-5 rounded-4 position-relative overflow-hidden"
+//                   style={{
+//                     background: "rgba(255, 255, 255, 0.1)",
+//                     backdropFilter: "blur(20px)",
+//                     border: "1px solid rgba(255, 255, 255, 0.2)",
+//                     boxShadow: "0 8px 32px rgba(0, 0, 0, 0.1)",
+//                     transition: "all 0.3s ease",
+//                     cursor: "pointer",
+//                   }}
+//                   // onMouseEnter={(e) => {
+//                   //   e.currentTarget.style.transform = "translateY(-8px)";
+//                   //   e.currentTarget.style.boxShadow =
+//                   //     "0 20px 60px rgba(0, 0, 0, 0.2)";
+//                   // }}
+//                   // onMouseLeave={(e) => {
+//                   //   e.currentTarget.style.transform = "translateY(0)";
+//                   //   e.currentTarget.style.boxShadow =
+//                   //     "0 8px 32px rgba(0, 0, 0, 0.1)";
+//                   // }}
+//                 >
+//                   <div
+//                     className="d-inline-flex p-3 rounded-3 mb-4"
+//                     style={{
+//                       background:
+//                         index === 0
+//                           ? "linear-gradient(45deg, #ff4500, #ff6b35)"
+//                           : index === 1
+//                           ? "linear-gradient(45deg, #f7931e, #ffab00)"
+//                           : "linear-gradient(45deg, #ff6b35, #f7931e)",
+//                     }}
+//                   >
+//                     {service.icon}
+//                   </div>
+//                   <h4 className="fw-bold mb-3">{service.title}</h4>
+//                   <p className="text-light mb-4" style={{ lineHeight: "1.6" }}>
+//                     {service.description}
+//                   </p>
+//                   <button
+//                     className="btn text-white fw-semibold d-flex align-items-center gap-2"
+//                     style={{
+//                       background: "rgba(255, 255, 255, 0.1)",
+//                       border: "1px solid rgba(255, 255, 255, 0.3)",
+//                       padding: "0.75rem 1.5rem",
+//                       borderRadius: "2rem",
+//                     }}
+//                   >
+//                     Learn More <ArrowRight className="w-4 h-4" />
+//                   </button>
+//                 </div>
+//               </div>
+//             ))}
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* Testimonials Section */}
+//       <section id="testimonials" className="py-20">
+//         <div className="container mx-auto px-6">
+//           <div className="text-center mb-16">
+//             <h2
+//               className="display-4 fw-bold mb-4"
+//               style={{
+//                 background: "linear-gradient(45deg, #fff, #ffe0b8)",
+//                 WebkitBackgroundClip: "text",
+//                 WebkitTextFillColor: "transparent",
+//                 backgroundClip: "text",
+//               }}
+//             >
+//               Client Success Stories
+//             </h2>
+//           </div>
+
+//           <div className="row g-4">
+//             {testimonials.map((testimonial, index) => (
+//               <div key={index} className="col-lg-4">
+//                 <div
+//                   className="p-5 rounded-4 h-100"
+//                   style={{
+//                     background: "rgba(255, 255, 255, 0.1)",
+//                     backdropFilter: "blur(20px)",
+//                     border: "1px solid rgba(255, 255, 255, 0.2)",
+//                     boxShadow: "0 8px 32px rgba(0, 0, 0, 0.1)",
+//                   }}
+//                 >
+//                   <div className="d-flex mb-3">
+//                     {[...Array(testimonial.rating)].map((_, i) => (
+//                       <Star
+//                         key={i}
+//                         className="w-5 h-5"
+//                         style={{ color: "#ffd700" }}
+//                         fill="currentColor"
+//                       />
+//                     ))}
+//                   </div>
+//                   <p
+//                     className="mb-4 text-light"
+//                     style={{ lineHeight: "1.6", fontStyle: "italic" }}
+//                   >
+//                     {testimonial.content}
+//                   </p>
+//                   <div>
+//                     <div className="fw-bold">{testimonial.name}</div>
+//                     <div className="text-light small">{testimonial.role}</div>
+//                   </div>
+//                 </div>
+//               </div>
+//             ))}
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* Contact Section */}
+//       <section id="contact" className="py-20">
+//         <div className="container mx-auto px-6">
+//           <div className="row align-items-center">
+//             <div className="col-lg-6">
+//               <h2
+//                 className="display-4 fw-bold mb-4"
+//                 style={{
+//                   background: "linear-gradient(45deg, #fff, #ffe0b8)",
+//                   WebkitBackgroundClip: "text",
+//                   WebkitTextFillColor: "transparent",
+//                   backgroundClip: "text",
+//                 }}
+//               >
+//                 Ready to Transform?
+//               </h2>
+//               <p className="fs-5 text-light mb-5">
+//                 Let&apos;s discuss how we can unlock the potential within your
+//                 organization and create sustainable growth together.
+//               </p>
+//               <div className="d-flex flex-column gap-3">
+//                 <div className="d-flex align-items-center gap-3">
+//                   <div
+//                     className="p-3 rounded-3"
+//                     style={{
+//                       background: "linear-gradient(45deg, #ff4500, #ff6b35)",
+//                     }}
+//                   >
+//                     <Mail className="w-5 h-5" />
+//                   </div>
+//                   <span>hello@danielscohr.co.za</span>
+//                 </div>
+//                 <div className="d-flex align-items-center gap-3">
+//                   <div
+//                     className="p-3 rounded-3"
+//                     style={{
+//                       background: "linear-gradient(45deg, #f7931e, #ffab00)",
+//                     }}
+//                   >
+//                     <Phone className="w-5 h-5" />
+//                   </div>
+//                   <span>+27 (0) 11 123 4567</span>
+//                 </div>
+//                 <div className="d-flex align-items-center gap-3">
+//                   <div
+//                     className="p-3 rounded-3"
+//                     style={{
+//                       background: "linear-gradient(45deg, #ff6b35, #f7931e)",
+//                     }}
+//                   >
+//                     <MapPin className="w-5 h-5" />
+//                   </div>
+//                   <span>Johannesburg, South Africa</span>
+//                 </div>
+//               </div>
+//             </div>
+//             <div className="col-lg-6 mt-5 mt-lg-0">
+//               <div
+//                 className="p-5 rounded-4"
+//                 style={{
+//                   background: "rgba(255, 255, 255, 0.1)",
+//                   backdropFilter: "blur(20px)",
+//                   border: "1px solid rgba(255, 255, 255, 0.2)",
+//                   boxShadow: "0 8px 32px rgba(0, 0, 0, 0.1)",
+//                 }}
+//               >
+//                 <div>
+//                   <div className="mb-3">
+//                     <input
+//                       type="text"
+//                       className="form-control rounded-3 p-3"
+//                       placeholder="Your Name"
+//                       style={{
+//                         background: "rgba(255, 255, 255, 0.1)",
+//                         border: "1px solid rgba(255, 255, 255, 0.3)",
+//                         color: "white",
+//                       }}
+//                     />
+//                   </div>
+//                   <div className="mb-3">
+//                     <input
+//                       type="email"
+//                       className="form-control rounded-3 p-3"
+//                       placeholder="Your Email"
+//                       style={{
+//                         background: "rgba(255, 255, 255, 0.1)",
+//                         border: "1px solid rgba(255, 255, 255, 0.3)",
+//                         color: "white",
+//                       }}
+//                     />
+//                   </div>
+//                   <div className="mb-4">
+//                     <textarea
+//                       className="form-control rounded-3 p-3"
+//                       rows={4}
+//                       placeholder="Tell us about your organization's needs..."
+//                       style={{
+//                         background: "rgba(255, 255, 255, 0.1)",
+//                         border: "1px solid rgba(255, 255, 255, 0.3)",
+//                         color: "white",
+//                         resize: "none",
+//                       }}
+//                     />
+//                   </div>
+//                   <button
+//                     className="btn w-100 py-3 rounded-3 text-white fw-semibold"
+//                     style={{
+//                       background: "linear-gradient(45deg, #ff4500, #ff6b35)",
+//                       border: "none",
+//                       boxShadow: "0 8px 32px rgba(255, 69, 0, 0.3)",
+//                     }}
+//                     onClick={() => {
+//                       // Handle form submission logic here
+//                       alert(
+//                         "Thank you for your interest! We will contact you soon."
+//                       );
+//                     }}
+//                   >
+//                     Send Message
+//                   </button>
+//                 </div>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* Footer */}
+//       <footer className="py-8 border-top border-light border-opacity-25">
+//         <div className="container mx-auto px-6">
+//           <div className="row align-items-center">
+//             <div className="col-md-6">
+//               <div
+//                 className="fw-bold fs-4 mb-2 d-flex align-items-center gap-2"
+//                 style={{
+//                   background: "linear-gradient(45deg, #fff, #ffe0b8)",
+//                   WebkitBackgroundClip: "text",
+//                   WebkitTextFillColor: "transparent",
+//                   backgroundClip: "text",
+//                 }}
+//               >
+//                 <div
+//                   className="d-flex align-items-center justify-content-center"
+//                   style={{
+//                     width: "32px",
+//                     height: "32px",
+//                     background: "linear-gradient(45deg, #ff4500, #ff6b35)",
+//                     borderRadius: "50%",
+//                     boxShadow: "0 4px 15px rgba(255, 69, 0, 0.2)",
+//                   }}
+//                 >
+//                   <div
+//                     style={{
+//                       width: "16px",
+//                       height: "20px",
+//                       background: "white",
+//                       clipPath: "polygon(50% 0%, 0% 100%, 100% 100%)",
+//                       borderRadius: "0 0 50% 50%",
+//                     }}
+//                   />
+//                 </div>
+//                 Daniels & Co
+//               </div>
+//               <p className="text-light small">
+//                 Human Capital Consulting • Inspiring Growth • Igniting Potential
+//               </p>
+//             </div>
+//             <div className="col-md-6 text-md-end">
+//               <p className="text-light small mb-0">
+//                 © 2024 Daniels Cohr. All rights reserved.
+//               </p>
+//             </div>
+//           </div>
+//         </div>
+//       </footer>
+
+//       <style jsx>{`
+//         @keyframes float {
+//           0%,
+//           100% {
+//             transform: translateY(0px) rotate(0deg);
+//           }
+//           50% {
+//             transform: translateY(-20px) rotate(5deg);
+//           }
+//         }
+
+//         .form-control::placeholder {
+//           color: rgba(255, 255, 255, 0.6);
+//         }
+
+//         .form-control:focus {
+//           background: rgba(255, 255, 255, 0.15) !important;
+//           border-color: rgba(255, 255, 255, 0.5) !important;
+//           box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.1) !important;
+//           color: white !important;
+//         }
+
+//         html {
+//           scroll-behavior: smooth;
+//         }
+//       `}</style>
+//     </div>
+//   );
+// }
+
+
+
+
+
+
+import React, { useState, useEffect } from 'react';
+import { ArrowRight, Users, TrendingUp, Heart, Brain, Hand, Mail, Phone, MapPin, CheckCircle, Star, Menu, X } from 'lucide-react';
 
 export default function DanielsCohrLanding() {
   const [isVisible, setIsVisible] = useState(false);
-  // const [activeService, setActiveService] = useState(0);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
@@ -786,276 +1644,265 @@ export default function DanielsCohrLanding() {
     {
       icon: <Users className="w-8 h-8" />,
       title: "Executive Search and Recruitment",
-      description:
-        "Find and attract top-tier executive talent through our comprehensive search process. We identify leaders who align with your culture and drive transformational growth.",
-      color: "from-orange-500 to-red-500",
+      description: "Find and attract top-tier executive talent through our comprehensive search process. We identify leaders who align with your culture and drive transformational growth.",
+      features: ["C-Suite Recruitment", "Leadership Assessment", "Cultural Fit Analysis", "Succession Planning"]
     },
     {
       icon: <Heart className="w-8 h-8" />,
       title: "Human Capital Business Partnering Outsourcing",
-      description:
-        "Strategic HR partnership services that integrate seamlessly with your business operations, providing expert guidance and execution for all your human capital needs.",
-      color: "from-yellow-500 to-orange-500",
+      description: "Strategic HR partnership services that integrate seamlessly with your business operations, providing expert guidance and execution for all your human capital needs.",
+      features: ["Strategic HR Planning", "Talent Management", "Performance Systems", "Organizational Development"]
     },
     {
       icon: <TrendingUp className="w-8 h-8" />,
       title: "Leadership Development and Coaching",
-      description:
-        "Comprehensive leadership programs and personalized coaching that unlock potential, enhance performance, and create sustainable organizational impact.",
-      color: "from-red-500 to-orange-500",
-    },
+      description: "Comprehensive leadership programs and personalized coaching that unlock potential, enhance performance, and create sustainable organizational impact.",
+      features: ["Executive Coaching", "Leadership Programs", "360° Feedback", "Succession Planning"]
+    }
   ];
 
   const testimonials = [
     {
       name: "Sarah Mitchell",
       role: "CEO, TechInnovate",
-      content:
-        "Daniels Cohr transformed our leadership approach. The results were immediate and sustainable.",
+      content: "Daniels & Co transformed our leadership approach. The results were immediate and sustainable.",
       rating: 5,
+      company: "TechInnovate"
     },
     {
       name: "Marcus Chen",
       role: "HR Director, GlobalCorp",
-      content:
-        "Their human-centered approach to consulting delivered exceptional organizational growth.",
+      content: "Their human-centered approach to consulting delivered exceptional organizational growth.",
       rating: 5,
+      company: "GlobalCorp"
     },
     {
       name: "Lisa Rodriguez",
       role: "Founder, GrowthLab",
-      content:
-        "The team's expertise in unlocking human potential is unmatched in the industry.",
+      content: "The team's expertise in unlocking human potential is unmatched in the industry.",
       rating: 5,
-    },
+      company: "GrowthLab"
+    }
+  ];
+
+  const stats = [
+    { number: "500+", label: "Leaders Placed" },
+    { number: "150+", label: "Companies Served" },
+    { number: "95%", label: "Client Satisfaction" },
+    { number: "15+", label: "Years Experience" }
   ];
 
   return (
-    <div
-      className="min-h-screen text-white overflow-hidden"
+    <div 
+      className="min-h-screen bg-white"
       style={{
-        background:
-          "linear-gradient(135deg, #ff6b35 0%, #f7931e 50%, #ff4500 100%)",
-        fontFamily:
-          "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+        fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
       }}
     >
-      {/* Animated Background Elements */}
-      <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div
-          className="absolute w-96 h-96 rounded-full opacity-20"
-          style={{
-            background: "linear-gradient(45deg, #ff6b35, #f7931e)",
-            top: "-10%",
-            right: "-10%",
-            animation: "float 6s ease-in-out infinite",
-          }}
-        />
-        <div
-          className="absolute w-80 h-80 rounded-full opacity-15"
-          style={{
-            background: "linear-gradient(45deg, #ff4500, #ff6b35)",
-            bottom: "-10%",
-            left: "-10%",
-            animation: "float 8s ease-in-out infinite reverse",
-          }}
-        />
-        <div
-          className="absolute w-64 h-64 rounded-full opacity-10"
-          style={{
-            background: "linear-gradient(45deg, #f7931e, #ffab00)",
-            top: "30%",
-            left: "70%",
-            animation: "float 10s ease-in-out infinite",
-          }}
-        />
-      </div>
-
       {/* Navigation */}
-      <nav
-        className="fixed top-0 w-full z-50 py-4 px-6"
+      <nav 
+        className="fixed top-0 w-100 z-50 py-3 px-4"
         style={{
-          background: "rgba(255, 255, 255, 0.1)",
-          backdropFilter: "blur(20px)",
-          borderBottom: "1px solid rgba(255, 255, 255, 0.2)",
+          background: 'rgba(255, 255, 255, 0.95)',
+          backdropFilter: 'blur(10px)',
+          borderBottom: '1px solid rgba(0, 0, 0, 0.08)',
+          boxShadow: '0 1px 10px rgba(0, 0, 0, 0.05)'
         }}
       >
-        <div className="container mx-auto d-flex justify-content-between align-items-center">
-          <div
-            className="fw-bold fs-3 d-flex align-items-center gap-3"
-            style={{
-              background: "linear-gradient(45deg, #fff, #ffe0b8)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              backgroundClip: "text",
-            }}
-          >
-            <Image
-              src="/logo-no-background.png" // Path relative to the public folder
-              alt="Pointer"
-              width={40}
-              height={40}
-            />
-            Daniels & Co
-          </div>
-          <div className="d-none d-md-flex gap-4">
-            {["Services", "Solutions", "Testimonials", "Contact"].map(
-              (item, index) => (
-                <a
-                  key={index}
-                  href={
-                    item === "Solutions"
-                      ? "#services"
-                      : `#${item.toLowerCase()}`
-                  }
-                  className="text-white text-decoration-none px-3 py-2 rounded-3"
+        <div className="container mx-auto">
+          <div className="d-flex justify-content-between align-items-center">
+            <div className="d-flex align-items-center gap-3">
+              <div 
+                className="d-flex align-items-center justify-content-center"
+                style={{
+                  width: '44px',
+                  height: '44px',
+                  background: 'linear-gradient(45deg, #ff4500, #ff6b35)',
+                  borderRadius: '12px',
+                  boxShadow: '0 4px 15px rgba(255, 69, 0, 0.2)'
+                }}
+              >
+                <div 
                   style={{
-                    transition: "all 0.3s ease",
-                    background: "rgba(255, 255, 255, 0.1)",
-                    backdropFilter: "blur(10px)",
+                    width: '20px',
+                    height: '24px',
+                    background: 'white',
+                    clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)',
+                    borderRadius: '0 0 50% 50%'
                   }}
-                  // onMouseEnter={(e) => {
-                  //   e.target.style.background = "rgba(255, 255, 255, 0.2)";
-                  //   e.target.style.transform = "translateY(-2px)";
-                  // }}
-                  // onMouseLeave={(e) => {
-                  //   e.target.style.background = "rgba(255, 255, 255, 0.1)";
-                  //   e.target.style.transform = "translateY(0)";
-                  // }}
+                />
+              </div>
+              <div>
+                <div className="fw-bold fs-4 text-dark">Daniels & Co</div>
+                <div className="small text-muted">Human Capital Consulting</div>
+              </div>
+            </div>
+            
+            <div className="d-none d-md-flex gap-4">
+              {['Services', 'About', 'Testimonials', 'Contact'].map((item, index) => (
+                <a 
+                  key={index}
+                  href={`#${item.toLowerCase()}`}
+                  className="text-dark text-decoration-none px-3 py-2 fw-medium"
+                  style={{
+                    transition: 'all 0.3s ease',
+                    borderRadius: '8px'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.target.style.background = 'rgba(255, 69, 0, 0.05)';
+                    e.target.style.color = '#ff4500';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.target.style.background = 'transparent';
+                    e.target.style.color = '#212529';
+                  }}
                 >
                   {item}
                 </a>
-              )
-            )}
+              ))}
+            </div>
+            
+            <button
+              className="btn d-md-none p-2"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              style={{ border: 'none', background: 'transparent' }}
+            >
+              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
           </div>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section className="container mx-auto px-6 pt-32 pb-20">
-        <div className="row align-items-center min-vh-100">
-          <div className="col-lg-6">
-            <div
-              className={`transition-all duration-1000 ${
-                isVisible
-                  ? "opacity-100 translate-y-0"
-                  : "opacity-0 translate-y-12"
-              }`}
-            >
-              <h1
-                className="display-2 fw-bold mb-4"
+      <section className="py-20 mt-5">
+        <div className="container mx-auto px-4">
+          <div className="row align-items-center min-vh-100">
+            <div className="col-lg-6">
+              <div 
+                className={`transition-all duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}
                 style={{
-                  background: "linear-gradient(45deg, #fff, #ffe0b8, #ffcc80)",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                  backgroundClip: "text",
-                  lineHeight: "1.2",
+                  transform: isVisible ? 'translateY(0)' : 'translateY(30px)'
                 }}
               >
-                Inspire. Grow. Ignite.
-              </h1>
-              <p className="fs-4 mb-5 text-light" style={{ lineHeight: "1.6" }}>
-                We unlock the potential within your people, transforming heads,
-                hearts, and hands to create sustainable, thriving organizations
-                that lead the future.
-              </p>
-              <div className="d-flex flex-column flex-md-row gap-3">
-                <button
-                  className="btn btn-lg px-5 py-3 rounded-pill text-white fw-semibold d-flex align-items-center justify-content-center gap-2"
+                <div 
+                  className="d-inline-block px-3 py-1 rounded-pill mb-4 small fw-medium"
                   style={{
-                    background: "linear-gradient(45deg, #ff4500, #ff6b35)",
-                    border: "none",
-                    boxShadow: "0 8px 32px rgba(255, 69, 0, 0.3)",
-                    transition: "all 0.3s ease",
+                    background: 'linear-gradient(45deg, rgba(255, 69, 0, 0.1), rgba(255, 107, 53, 0.1))',
+                    color: '#ff4500',
+                    border: '1px solid rgba(255, 69, 0, 0.2)'
                   }}
-                  // onMouseEnter={(e) => {
-                  //   e.target.style.transform = "translateY(-3px)";
-                  //   e.target.style.boxShadow =
-                  //     "0 12px 40px rgba(255, 69, 0, 0.4)";
-                  // }}
-                  // onMouseLeave={(e) => {
-                  //   e.target.style.transform = "translateY(0)";
-                  //   e.target.style.boxShadow =
-                  //     "0 8px 32px rgba(255, 69, 0, 0.3)";
-                  // }}
                 >
-                  Start Your Transformation <ArrowRight className="w-5 h-5" />
-                </button>
-                <button
-                  className="btn btn-lg btn-outline-light px-5 py-3 rounded-pill fw-semibold"
-                  style={{
-                    background: "rgba(255, 255, 255, 0.1)",
-                    backdropFilter: "blur(10px)",
-                    border: "1px solid rgba(255, 255, 255, 0.3)",
-                    transition: "all 0.3s ease",
-                  }}
-                  // onMouseEnter={(e) => {
-                  //   e.target.style.background = "rgba(255, 255, 255, 0.2)";
-                  //   e.target.style.transform = "translateY(-2px)";
-                  // }}
-                  // onMouseLeave={(e) => {
-                  //   e.target.style.background = "rgba(255, 255, 255, 0.1)";
-                  //   e.target.style.transform = "translateY(0)";
-                  // }}
-                >
-                  Learn More
-                </button>
+                  ✨ Transforming Organizations Since 2008
+                </div>
+                <h1 className="display-1 fw-bold mb-4 text-dark" style={{ lineHeight: '1.1' }}>
+                  Inspire.<br/>
+                  <span style={{ color: '#ff4500' }}>Grow.</span><br/>
+                  Ignite.
+                </h1>
+                <p className="fs-5 text-muted mb-5" style={{ lineHeight: '1.7', maxWidth: '500px' }}>
+                  We unlock the potential within your people, transforming heads, hearts, and hands to create sustainable, thriving organizations that lead the future.
+                </p>
+                <div className="d-flex flex-column flex-md-row gap-3">
+                  <button 
+                    className="btn btn-lg px-5 py-3 text-white fw-semibold d-flex align-items-center justify-content-center gap-2"
+                    style={{
+                      background: 'linear-gradient(45deg, #ff4500, #ff6b35)',
+                      border: 'none',
+                      borderRadius: '12px',
+                      boxShadow: '0 4px 20px rgba(255, 69, 0, 0.25)',
+                      transition: 'all 0.3s ease'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.target.style.transform = 'translateY(-2px)';
+                      e.target.style.boxShadow = '0 8px 30px rgba(255, 69, 0, 0.35)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.target.style.transform = 'translateY(0)';
+                      e.target.style.boxShadow = '0 4px 20px rgba(255, 69, 0, 0.25)';
+                    }}
+                  >
+                    Start Your Transformation <ArrowRight className="w-5 h-5" />
+                  </button>
+                  <button 
+                    className="btn btn-lg btn-outline-dark px-5 py-3 fw-semibold"
+                    style={{
+                      borderRadius: '12px',
+                      transition: 'all 0.3s ease'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.target.style.background = '#f8f9fa';
+                      e.target.style.transform = 'translateY(-2px)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.target.style.background = 'transparent';
+                      e.target.style.transform = 'translateY(0)';
+                    }}
+                  >
+                    Learn More
+                  </button>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="col-lg-6 mt-5 mt-lg-0">
-            <div
-              className="position-relative"
-              style={{
-                transform: `translateY(${isVisible ? "0" : "50px"})`,
-                opacity: isVisible ? 1 : 0,
-                transition: "all 1s ease 0.3s",
-              }}
-            >
-              <div
-                className="rounded-4 p-5 text-center"
+            <div className="col-lg-6 mt-5 mt-lg-0">
+              <div 
+                className="position-relative"
                 style={{
-                  background: "rgba(255, 255, 255, 0.1)",
-                  backdropFilter: "blur(20px)",
-                  border: "1px solid rgba(255, 255, 255, 0.2)",
-                  boxShadow: "0 8px 32px rgba(0, 0, 0, 0.1)",
+                  transform: `translateY(${isVisible ? '0' : '50px'})`,
+                  opacity: isVisible ? 1 : 0,
+                  transition: 'all 1s ease 0.3s'
                 }}
               >
-                <div className="row g-4">
-                  <div className="col-4">
-                    <div
-                      className="p-4 rounded-3 text-center"
-                      style={{
-                        background: "linear-gradient(45deg, #ff4500, #ff6b35)",
-                        boxShadow: "0 4px 20px rgba(255, 69, 0, 0.3)",
-                      }}
-                    >
-                      <Brain className="w-12 h-12 mx-auto mb-2" />
-                      <div className="fw-bold">Think</div>
+                <div 
+                  className="p-5 text-center"
+                  style={{
+                    background: 'white',
+                    borderRadius: '20px',
+                    border: '1px solid rgba(0, 0, 0, 0.08)',
+                    boxShadow: '0 10px 40px rgba(0, 0, 0, 0.08)'
+                  }}
+                >
+                  <div className="row g-4">
+                    <div className="col-4">
+                      <div 
+                        className="p-4 text-center"
+                        style={{
+                          background: 'linear-gradient(45deg, #ff4500, #ff6b35)',
+                          borderRadius: '16px',
+                          color: 'white',
+                          boxShadow: '0 4px 20px rgba(255, 69, 0, 0.25)'
+                        }}
+                      >
+                        <Brain className="w-10 h-10 mx-auto mb-2" />
+                        <div className="fw-bold small">Think</div>
+                      </div>
                     </div>
-                  </div>
-                  <div className="col-4">
-                    <div
-                      className="p-4 rounded-3 text-center"
-                      style={{
-                        background: "linear-gradient(45deg, #f7931e, #ffab00)",
-                        boxShadow: "0 4px 20px rgba(247, 147, 30, 0.3)",
-                      }}
-                    >
-                      <Heart className="w-12 h-12 mx-auto mb-2" />
-                      <div className="fw-bold">Feel</div>
+                    <div className="col-4">
+                      <div 
+                        className="p-4 text-center"
+                        style={{
+                          background: 'linear-gradient(45deg, #f8f9fa, #e9ecef)',
+                          borderRadius: '16px',
+                          color: '#495057',
+                          border: '1px solid rgba(0, 0, 0, 0.08)'
+                        }}
+                      >
+                        <Heart className="w-10 h-10 mx-auto mb-2" style={{ color: '#ff4500' }} />
+                        <div className="fw-bold small">Feel</div>
+                      </div>
                     </div>
-                  </div>
-                  <div className="col-4">
-                    <div
-                      className="p-4 rounded-3 text-center"
-                      style={{
-                        background: "linear-gradient(45deg, #ff6b35, #f7931e)",
-                        boxShadow: "0 4px 20px rgba(255, 107, 53, 0.3)",
-                      }}
-                    >
-                      <Hand className="w-12 h-12 mx-auto mb-2" />
-                      <div className="fw-bold">Act</div>
+                    <div className="col-4">
+                      <div 
+                        className="p-4 text-center"
+                        style={{
+                          background: 'linear-gradient(45deg, #f8f9fa, #e9ecef)',
+                          borderRadius: '16px',
+                          color: '#495057',
+                          border: '1px solid rgba(0, 0, 0, 0.08)'
+                        }}
+                      >
+                        <Hand className="w-10 h-10 mx-auto mb-2" style={{ color: '#ff4500' }} />
+                        <div className="fw-bold small">Act</div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1065,295 +1912,104 @@ export default function DanielsCohrLanding() {
         </div>
       </section>
 
-      {/* Key Services Highlight Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-6">
+      {/* Stats Section */}
+      <section className="py-16" style={{ background: '#f8f9fa' }}>
+        <div className="container mx-auto px-4">
+          <div className="row g-4 text-center">
+            {stats.map((stat, index) => (
+              <div key={index} className="col-lg-3 col-md-6">
+                <div className="p-4">
+                  <div className="display-4 fw-bold mb-2" style={{ color: '#ff4500' }}>
+                    {stat.number}
+                  </div>
+                  <div className="text-muted fw-medium">{stat.label}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Core Services Section */}
+      <section id="services" className="py-20">
+        <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2
-              className="display-4 fw-bold mb-4"
-              style={{
-                background: "linear-gradient(45deg, #fff, #ffe0b8)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                backgroundClip: "text",
-              }}
-            >
+            <h2 className="display-4 fw-bold mb-4 text-dark">
               Core Services
             </h2>
-            <p className="fs-5 text-light">
-              Specialized solutions for your human capital needs
+            <p className="fs-5 text-muted" style={{ maxWidth: '600px', margin: '0 auto' }}>
+              Specialized solutions designed to transform your organization's human capital potential
             </p>
           </div>
-
+          
           <div className="row g-5">
-            <div className="col-lg-4">
-              <div
-                className="text-center p-6 rounded-4 h-100"
-                style={{
-                  background: "rgba(255, 255, 255, 0.1)",
-                  backdropFilter: "blur(20px)",
-                  border: "1px solid rgba(255, 255, 255, 0.2)",
-                  boxShadow: "0 8px 32px rgba(0, 0, 0, 0.1)",
-                  transition: "all 0.3s ease",
-                }}
-                // onMouseEnter={(e) => {
-                //   e.currentTarget.style.transform =
-                //     "translateY(-10px) scale(1.02)";
-                //   e.currentTarget.style.boxShadow =
-                //     "0 25px 60px rgba(255, 69, 0, 0.15)";
-                // }}
-                // onMouseLeave={(e) => {
-                //   e.currentTarget.style.transform = "translateY(0) scale(1)";
-                //   e.currentTarget.style.boxShadow =
-                //     "0 8px 32px rgba(0, 0, 0, 0.1)";
-                // }}
-              >
-                <div
-                  className="d-inline-flex p-4 rounded-4 mb-4"
-                  style={{
-                    background: "linear-gradient(45deg, #ff4500, #ff6b35)",
-                    boxShadow: "0 8px 25px rgba(255, 69, 0, 0.3)",
-                  }}
-                >
-                  <Users className="w-12 h-12" />
-                </div>
-                <h3
-                  className="fw-bold mb-4 text-uppercase fs-5"
-                  style={{ letterSpacing: "1px" }}
-                >
-                  Executive Search & Recruitment
-                </h3>
-                <p className="text-light mb-4" style={{ lineHeight: "1.7" }}>
-                  Strategic talent acquisition for C-suite and senior leadership
-                  positions. We identify and attract exceptional leaders who
-                  drive organizational transformation and sustainable growth.
-                </p>
-                <div className="d-flex justify-content-center">
-                  <button
-                    className="btn btn-outline-light px-4 py-2 rounded-pill"
-                    style={{
-                      border: "2px solid rgba(255, 255, 255, 0.3)",
-                      transition: "all 0.3s ease",
-                    }}
-                    // onMouseEnter={(e) => {
-                    //   e.target.style.background = "rgba(255, 69, 0, 0.2)";
-                    //   e.target.style.borderColor = "#ff4500";
-                    // }}
-                    // onMouseLeave={(e) => {
-                    //   e.target.style.background = "transparent";
-                    //   e.target.style.borderColor = "rgba(255, 255, 255, 0.3)";
-                    // }}
-                  >
-                    Explore Service
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4">
-              <div
-                className="text-center p-6 rounded-4 h-100"
-                style={{
-                  background: "rgba(255, 255, 255, 0.1)",
-                  backdropFilter: "blur(20px)",
-                  border: "1px solid rgba(255, 255, 255, 0.2)",
-                  boxShadow: "0 8px 32px rgba(0, 0, 0, 0.1)",
-                  transition: "all 0.3s ease",
-                }}
-                // onMouseEnter={(e) => {
-                //   e.currentTarget.style.transform =
-                //     "translateY(-10px) scale(1.02)";
-                //   e.currentTarget.style.boxShadow =
-                //     "0 25px 60px rgba(247, 147, 30, 0.15)";
-                // }}
-                // onMouseLeave={(e) => {
-                //   e.currentTarget.style.transform = "translateY(0) scale(1)";
-                //   e.currentTarget.style.boxShadow =
-                //     "0 8px 32px rgba(0, 0, 0, 0.1)";
-                // }}
-              >
-                <div
-                  className="d-inline-flex p-4 rounded-4 mb-4"
-                  style={{
-                    background: "linear-gradient(45deg, #f7931e, #ffab00)",
-                    boxShadow: "0 8px 25px rgba(247, 147, 30, 0.3)",
-                  }}
-                >
-                  <Heart className="w-12 h-12" />
-                </div>
-                <h3
-                  className="fw-bold mb-4 text-uppercase fs-5"
-                  style={{ letterSpacing: "1px" }}
-                >
-                  Human Capital Business Partnering Outsourcing
-                </h3>
-                <p className="text-light mb-4" style={{ lineHeight: "1.7" }}>
-                  Comprehensive HR outsourcing solutions that integrate with
-                  your business strategy. From talent management to
-                  organizational development, we become your strategic HR
-                  partner.
-                </p>
-                <div className="d-flex justify-content-center">
-                  <button
-                    className="btn btn-outline-light px-4 py-2 rounded-pill"
-                    style={{
-                      border: "2px solid rgba(255, 255, 255, 0.3)",
-                      transition: "all 0.3s ease",
-                    }}
-                    // onMouseEnter={(e) => {
-                    //   e.target.style.background = "rgba(247, 147, 30, 0.2)";
-                    //   e.target.style.borderColor = "#f7931e";
-                    // }}
-                    // onMouseLeave={(e) => {
-                    //   e.target.style.background = "transparent";
-                    //   e.target.style.borderColor = "rgba(255, 255, 255, 0.3)";
-                    // }}
-                  >
-                    Explore Service
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4">
-              <div
-                className="text-center p-6 rounded-4 h-100"
-                style={{
-                  background: "rgba(255, 255, 255, 0.1)",
-                  backdropFilter: "blur(20px)",
-                  border: "1px solid rgba(255, 255, 255, 0.2)",
-                  boxShadow: "0 8px 32px rgba(0, 0, 0, 0.1)",
-                  transition: "all 0.3s ease",
-                }}
-                // onMouseEnter={(e) => {
-                //   e.currentTarget.style.transform =
-                //     "translateY(-10px) scale(1.02)";
-                //   e.currentTarget.style.boxShadow =
-                //     "0 25px 60px rgba(255, 107, 53, 0.15)";
-                // }}
-                // onMouseLeave={(e) => {
-                //   e.currentTarget.style.transform = "translateY(0) scale(1)";
-                //   e.currentTarget.style.boxShadow =
-                //     "0 8px 32px rgba(0, 0, 0, 0.1)";
-                // }}
-              >
-                <div
-                  className="d-inline-flex p-4 rounded-4 mb-4"
-                  style={{
-                    background: "linear-gradient(45deg, #ff6b35, #f7931e)",
-                    boxShadow: "0 8px 25px rgba(255, 107, 53, 0.3)",
-                  }}
-                >
-                  <TrendingUp className="w-12 h-12" />
-                </div>
-                <h3
-                  className="fw-bold mb-4 text-uppercase fs-5"
-                  style={{ letterSpacing: "1px" }}
-                >
-                  Leadership Development & Coaching
-                </h3>
-                <p className="text-light mb-4" style={{ lineHeight: "1.7" }}>
-                  Personalized leadership development programs and executive
-                  coaching that unlock potential, enhance performance, and
-                  create lasting organizational impact through transformational
-                  leadership.
-                </p>
-                <div className="d-flex justify-content-center">
-                  <button
-                    className="btn btn-outline-light px-4 py-2 rounded-pill"
-                    style={{
-                      border: "2px solid rgba(255, 255, 255, 0.3)",
-                      transition: "all 0.3s ease",
-                    }}
-                    // onMouseEnter={(e) => {
-                    //   e.target.style.background = "rgba(255, 107, 53, 0.2)";
-                    //   e.target.style.borderColor = "#ff6b35";
-                    // }}
-                    // onMouseLeave={(e) => {
-                    //   e.target.style.background = "transparent";
-                    //   e.target.style.borderColor = "rgba(255, 255, 255, 0.3)";
-                    // }}
-                  >
-                    Explore Service
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Section */}
-      <section id="services" className="py-20">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2
-              className="display-4 fw-bold mb-4"
-              style={{
-                background: "linear-gradient(45deg, #fff, #ffe0b8)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                backgroundClip: "text",
-              }}
-            >
-              Our Services
-            </h2>
-            <p className="fs-5 text-light">
-              Comprehensive solutions to transform your organization
-            </p>
-          </div>
-
-          <div className="row g-4 justify-content-center">
             {services.map((service, index) => (
-              <div key={index} className="col-lg-4 col-md-6">
-                <div
-                  className="h-100 p-5 rounded-4 position-relative overflow-hidden"
+              <div key={index} className="col-lg-4">
+                <div 
+                  className="h-100 p-5 text-center"
                   style={{
-                    background: "rgba(255, 255, 255, 0.1)",
-                    backdropFilter: "blur(20px)",
-                    border: "1px solid rgba(255, 255, 255, 0.2)",
-                    boxShadow: "0 8px 32px rgba(0, 0, 0, 0.1)",
-                    transition: "all 0.3s ease",
-                    cursor: "pointer",
+                    background: 'white',
+                    borderRadius: '20px',
+                    border: '1px solid rgba(0, 0, 0, 0.08)',
+                    boxShadow: '0 5px 25px rgba(0, 0, 0, 0.08)',
+                    transition: 'all 0.3s ease'
                   }}
-                  // onMouseEnter={(e) => {
-                  //   e.currentTarget.style.transform = "translateY(-8px)";
-                  //   e.currentTarget.style.boxShadow =
-                  //     "0 20px 60px rgba(0, 0, 0, 0.2)";
-                  // }}
-                  // onMouseLeave={(e) => {
-                  //   e.currentTarget.style.transform = "translateY(0)";
-                  //   e.currentTarget.style.boxShadow =
-                  //     "0 8px 32px rgba(0, 0, 0, 0.1)";
-                  // }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = 'translateY(-10px)';
+                    e.currentTarget.style.boxShadow = '0 15px 40px rgba(0, 0, 0, 0.12)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = 'translateY(0)';
+                    e.currentTarget.style.boxShadow = '0 5px 25px rgba(0, 0, 0, 0.08)';
+                  }}
                 >
-                  <div
-                    className="d-inline-flex p-3 rounded-3 mb-4"
+                  <div 
+                    className="d-inline-flex p-4 mb-4"
                     style={{
-                      background:
-                        index === 0
-                          ? "linear-gradient(45deg, #ff4500, #ff6b35)"
-                          : index === 1
-                          ? "linear-gradient(45deg, #f7931e, #ffab00)"
-                          : "linear-gradient(45deg, #ff6b35, #f7931e)",
+                      background: index === 0 
+                        ? 'linear-gradient(45deg, #ff4500, #ff6b35)' 
+                        : 'rgba(255, 69, 0, 0.1)',
+                      borderRadius: '16px',
+                      color: index === 0 ? 'white' : '#ff4500'
                     }}
                   >
                     {service.icon}
                   </div>
-                  <h4 className="fw-bold mb-3">{service.title}</h4>
-                  <p className="text-light mb-4" style={{ lineHeight: "1.6" }}>
+                  <h3 className="fw-bold mb-3 text-dark">{service.title}</h3>
+                  <p className="text-muted mb-4" style={{ lineHeight: '1.6' }}>
                     {service.description}
                   </p>
-                  <button
-                    className="btn text-white fw-semibold d-flex align-items-center gap-2"
+                  <div className="text-start mb-4">
+                    {service.features.map((feature, i) => (
+                      <div key={i} className="d-flex align-items-center mb-2">
+                        <CheckCircle className="w-4 h-4 me-3" style={{ color: '#ff4500' }} />
+                        <span className="small text-muted">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <button 
+                    className="btn w-100 py-3 fw-semibold"
                     style={{
-                      background: "rgba(255, 255, 255, 0.1)",
-                      border: "1px solid rgba(255, 255, 255, 0.3)",
-                      padding: "0.75rem 1.5rem",
-                      borderRadius: "2rem",
+                      background: index === 0 ? 'linear-gradient(45deg, #ff4500, #ff6b35)' : 'transparent',
+                      color: index === 0 ? 'white' : '#ff4500',
+                      border: index === 0 ? 'none' : '2px solid #ff4500',
+                      borderRadius: '12px',
+                      transition: 'all 0.3s ease'
+                    }}
+                    onMouseEnter={(e) => {
+                      if (index !== 0) {
+                        e.target.style.background = '#ff4500';
+                        e.target.style.color = 'white';
+                      }
+                    }}
+                    onMouseLeave={(e) => {
+                      if (index !== 0) {
+                        e.target.style.background = 'transparent';
+                        e.target.style.color = '#ff4500';
+                      }
                     }}
                   >
-                    Learn More <ArrowRight className="w-4 h-4" />
+                    Learn More
                   </button>
                 </div>
               </div>
@@ -1362,54 +2018,164 @@ export default function DanielsCohrLanding() {
         </div>
       </section>
 
+      {/* About Section */}
+      <section id="about" className="py-20" style={{ background: '#f8f9fa' }}>
+        <div className="container mx-auto px-4">
+          <div className="row align-items-center">
+            <div className="col-lg-6">
+              <h2 className="display-4 fw-bold mb-4 text-dark">
+                Why Choose Daniels & Co?
+              </h2>
+              <p className="fs-5 text-muted mb-5" style={{ lineHeight: '1.7' }}>
+                With over 15 years of experience in human capital consulting, we've helped hundreds of organizations unlock their full potential through strategic talent solutions.
+              </p>
+              <div className="row g-4">
+                <div className="col-md-6">
+                  <div className="d-flex align-items-start gap-3">
+                    <div 
+                      className="p-2 rounded-3"
+                      style={{ background: 'rgba(255, 69, 0, 0.1)' }}
+                    >
+                      <Users className="w-5 h-5" style={{ color: '#ff4500' }} />
+                    </div>
+                    <div>
+                      <div className="fw-bold text-dark mb-1">Expert Team</div>
+                      <div className="small text-muted">Seasoned professionals with deep industry knowledge</div>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-md-6">
+                  <div className="d-flex align-items-start gap-3">
+                    <div 
+                      className="p-2 rounded-3"
+                      style={{ background: 'rgba(255, 69, 0, 0.1)' }}
+                    >
+                      <TrendingUp className="w-5 h-5" style={{ color: '#ff4500' }} />
+                    </div>
+                    <div>
+                      <div className="fw-bold text-dark mb-1">Proven Results</div>
+                      <div className="small text-muted">Track record of successful transformations</div>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-md-6">
+                  <div className="d-flex align-items-start gap-3">
+                    <div 
+                      className="p-2 rounded-3"
+                      style={{ background: 'rgba(255, 69, 0, 0.1)' }}
+                    >
+                      <Heart className="w-5 h-5" style={{ color: '#ff4500' }} />
+                    </div>
+                    <div>
+                      <div className="fw-bold text-dark mb-1">Human-Centered</div>
+                      <div className="small text-muted">People-first approach to organizational change</div>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-md-6">
+                  <div className="d-flex align-items-start gap-3">
+                    <div 
+                      className="p-2 rounded-3"
+                      style={{ background: 'rgba(255, 69, 0, 0.1)' }}
+                    >
+                      <CheckCircle className="w-5 h-5" style={{ color: '#ff4500' }} />
+                    </div>
+                    <div>
+                      <div className="fw-bold text-dark mb-1">Tailored Solutions</div>
+                      <div className="small text-muted">Customized strategies for your unique needs</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-6 mt-5 mt-lg-0">
+              <div 
+                className="p-6"
+                style={{
+                  background: 'white',
+                  borderRadius: '20px',
+                  border: '1px solid rgba(0, 0, 0, 0.08)',
+                  boxShadow: '0 10px 40px rgba(0, 0, 0, 0.08)'
+                }}
+              >
+                <h4 className="fw-bold mb-4 text-dark">Our Mission</h4>
+                <p className="text-muted mb-4" style={{ lineHeight: '1.7' }}>
+                  To inspire, grow, and ignite people in business so that they can unlock their heads, hearts, and hands, creating sustainable, thriving organizations that make a meaningful impact.
+                </p>
+                <div 
+                  className="p-4 rounded-4"
+                  style={{ background: 'rgba(255, 69, 0, 0.05)' }}
+                >
+                  <div className="small fw-bold mb-2" style={{ color: '#ff4500' }}>
+                    "Transforming organizations through people"
+                  </div>
+                  <div className="small text-muted">
+                    Our philosophy centers on the belief that sustainable organizational success comes from unlocking human potential at every level.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Testimonials Section */}
       <section id="testimonials" className="py-20">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2
-              className="display-4 fw-bold mb-4"
-              style={{
-                background: "linear-gradient(45deg, #fff, #ffe0b8)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                backgroundClip: "text",
-              }}
-            >
+            <h2 className="display-4 fw-bold mb-4 text-dark">
               Client Success Stories
             </h2>
+            <p className="fs-5 text-muted">
+              Hear from leaders who've experienced transformation
+            </p>
           </div>
-
+          
           <div className="row g-4">
             {testimonials.map((testimonial, index) => (
               <div key={index} className="col-lg-4">
-                <div
-                  className="p-5 rounded-4 h-100"
+                <div 
+                  className="p-5 h-100"
                   style={{
-                    background: "rgba(255, 255, 255, 0.1)",
-                    backdropFilter: "blur(20px)",
-                    border: "1px solid rgba(255, 255, 255, 0.2)",
-                    boxShadow: "0 8px 32px rgba(0, 0, 0, 0.1)",
+                    background: 'white',
+                    borderRadius: '20px',
+                    border: '1px solid rgba(0, 0, 0, 0.08)',
+                    boxShadow: '0 5px 25px rgba(0, 0, 0, 0.08)',
+                    transition: 'all 0.3s ease'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.boxShadow = '0 10px 40px rgba(0, 0, 0, 0.12)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.boxShadow = '0 5px 25px rgba(0, 0, 0, 0.08)';
                   }}
                 >
                   <div className="d-flex mb-3">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star
-                        key={i}
-                        className="w-5 h-5"
-                        style={{ color: "#ffd700" }}
-                        fill="currentColor"
-                      />
+                      <Star key={i} className="w-4 h-4" style={{ color: '#ff4500' }} fill="currentColor" />
                     ))}
                   </div>
-                  <p
-                    className="mb-4 text-light"
-                    style={{ lineHeight: "1.6", fontStyle: "italic" }}
-                  >
-                    {testimonial.content}
+                  <p className="mb-4 text-muted" style={{ lineHeight: '1.6' }}>
+                    "{testimonial.content}"
                   </p>
-                  <div>
-                    <div className="fw-bold">{testimonial.name}</div>
-                    <div className="text-light small">{testimonial.role}</div>
+                  <div className="d-flex align-items-center gap-3">
+                    <div 
+                      className="d-flex align-items-center justify-content-center"
+                      style={{
+                        width: '48px',
+                        height: '48px',
+                        background: 'linear-gradient(45deg, #ff4500, #ff6b35)',
+                        borderRadius: '50%',
+                        color: 'white',
+                        fontWeight: 'bold'
+                      }}
+                    >
+                      {testimonial.name.charAt(0)}
+                    </div>
+                    <div>
+                      <div className="fw-bold text-dark">{testimonial.name}</div>
+                      <div className="small text-muted">{testimonial.role}</div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1419,121 +2185,147 @@ export default function DanielsCohrLanding() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20">
-        <div className="container mx-auto px-6">
+      <section id="contact" className="py-20" style={{ background: '#f8f9fa' }}>
+        <div className="container mx-auto px-4">
           <div className="row align-items-center">
             <div className="col-lg-6">
-              <h2
-                className="display-4 fw-bold mb-4"
-                style={{
-                  background: "linear-gradient(45deg, #fff, #ffe0b8)",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                  backgroundClip: "text",
-                }}
-              >
+              <h2 className="display-4 fw-bold mb-4 text-dark">
                 Ready to Transform?
               </h2>
-              <p className="fs-5 text-light mb-5">
-                Let&apos;s discuss how we can unlock the potential within your
-                organization and create sustainable growth together.
+              <p className="fs-5 text-muted mb-5" style={{ lineHeight: '1.7' }}>
+                Let's discuss how we can unlock the potential within your organization and create sustainable growth together.
               </p>
-              <div className="d-flex flex-column gap-3">
-                <div className="d-flex align-items-center gap-3">
-                  <div
-                    className="p-3 rounded-3"
+              <div className="d-flex flex-column gap-4">
+                <div className="d-flex align-items-center gap-4">
+                  <div 
+                    className="p-3"
                     style={{
-                      background: "linear-gradient(45deg, #ff4500, #ff6b35)",
+                      background: 'linear-gradient(45deg, #ff4500, #ff6b35)',
+                      borderRadius: '12px',
+                      color: 'white'
                     }}
                   >
                     <Mail className="w-5 h-5" />
                   </div>
-                  <span>hello@danielscohr.co.za</span>
+                  <div>
+                    <div className="fw-bold text-dark">Email Us</div>
+                    <div className="text-muted">hello@danielscohr.co.za</div>
+                  </div>
                 </div>
-                <div className="d-flex align-items-center gap-3">
-                  <div
-                    className="p-3 rounded-3"
+                <div className="d-flex align-items-center gap-4">
+                  <div 
+                    className="p-3"
                     style={{
-                      background: "linear-gradient(45deg, #f7931e, #ffab00)",
+                      background: 'rgba(255, 69, 0, 0.1)',
+                      borderRadius: '12px',
+                      color: '#ff4500'
                     }}
                   >
                     <Phone className="w-5 h-5" />
                   </div>
-                  <span>+27 (0) 11 123 4567</span>
+                  <div>
+                    <div className="fw-bold text-dark">Call Us</div>
+                    <div className="text-muted">+27 (0) 11 123 4567</div>
+                  </div>
                 </div>
-                <div className="d-flex align-items-center gap-3">
-                  <div
-                    className="p-3 rounded-3"
+                <div className="d-flex align-items-center gap-4">
+                  <div 
+                    className="p-3"
                     style={{
-                      background: "linear-gradient(45deg, #ff6b35, #f7931e)",
+                      background: 'rgba(255, 69, 0, 0.1)',
+                      borderRadius: '12px',
+                      color: '#ff4500'
                     }}
                   >
                     <MapPin className="w-5 h-5" />
                   </div>
-                  <span>Johannesburg, South Africa</span>
+                  <div>
+                    <div className="fw-bold text-dark">Visit Us</div>
+                    <div className="text-muted">Johannesburg, South Africa</div>
+                  </div>
                 </div>
               </div>
             </div>
             <div className="col-lg-6 mt-5 mt-lg-0">
-              <div
-                className="p-5 rounded-4"
+              <div 
+                className="p-5"
                 style={{
-                  background: "rgba(255, 255, 255, 0.1)",
-                  backdropFilter: "blur(20px)",
-                  border: "1px solid rgba(255, 255, 255, 0.2)",
-                  boxShadow: "0 8px 32px rgba(0, 0, 0, 0.1)",
+                  background: 'white',
+                  borderRadius: '20px',
+                  border: '1px solid rgba(0, 0, 0, 0.08)',
+                  boxShadow: '0 10px 40px rgba(0, 0, 0, 0.08)'
                 }}
               >
+                <h4 className="fw-bold mb-4 text-dark">Get In Touch</h4>
                 <div>
                   <div className="mb-3">
-                    <input
-                      type="text"
-                      className="form-control rounded-3 p-3"
+                    <input 
+                      type="text" 
+                      className="form-control p-3"
                       placeholder="Your Name"
                       style={{
-                        background: "rgba(255, 255, 255, 0.1)",
-                        border: "1px solid rgba(255, 255, 255, 0.3)",
-                        color: "white",
+                        borderRadius: '12px',
+                        border: '1px solid rgba(0, 0, 0, 0.1)',
+                        fontSize: '16px'
                       }}
                     />
                   </div>
                   <div className="mb-3">
-                    <input
-                      type="email"
-                      className="form-control rounded-3 p-3"
+                    <input 
+                      type="email" 
+                      className="form-control p-3"
                       placeholder="Your Email"
                       style={{
-                        background: "rgba(255, 255, 255, 0.1)",
-                        border: "1px solid rgba(255, 255, 255, 0.3)",
-                        color: "white",
+                        borderRadius: '12px',
+                        border: '1px solid rgba(0, 0, 0, 0.1)',
+                        fontSize: '16px'
+                      }}
+                    />
+                  </div>
+                  <div className="mb-3">
+                    <input 
+                      type="text" 
+                      className="form-control p-3"
+                      placeholder="Company"
+                      style={{
+                        borderRadius: '12px',
+                        border: '1px solid rgba(0, 0, 0, 0.1)',
+                        fontSize: '16px'
                       }}
                     />
                   </div>
                   <div className="mb-4">
-                    <textarea
-                      className="form-control rounded-3 p-3"
-                      rows={4}
+                    <textarea 
+                      className="form-control p-3"
+                      rows="4"
                       placeholder="Tell us about your organization's needs..."
                       style={{
-                        background: "rgba(255, 255, 255, 0.1)",
-                        border: "1px solid rgba(255, 255, 255, 0.3)",
-                        color: "white",
-                        resize: "none",
+                        borderRadius: '12px',
+                        border: '1px solid rgba(0, 0, 0, 0.1)',
+                        fontSize: '16px',
+                        resize: 'none'
                       }}
                     />
                   </div>
-                  <button
-                    className="btn w-100 py-3 rounded-3 text-white fw-semibold"
+                  <button 
+                    className="btn w-100 p-3 text-white fw-semibold"
                     style={{
-                      background: "linear-gradient(45deg, #ff4500, #ff6b35)",
-                      border: "none",
-                      boxShadow: "0 8px 32px rgba(255, 69, 0, 0.3)",
+                      background: 'linear-gradient(45deg, #ff4500, #ff6b35)',
+                      border: 'none',
+                      borderRadius: '12px',
+                      fontSize: '16px',
+                      transition: 'all 0.3s ease'
                     }}
                     onClick={() => {
-                      // Handle form submission logic here
-                      alert(
-                        "Thank you for your interest! We will contact you soon."
-                      );
+                      alert('Thank you for your interest! We will contact you soon.');
+                    }}
+                    onMouseEnter={(e) => {
+                      e.target.style.transform = 'translateY(-2px)';
+                      e.target.style.boxShadow = '0 8px 30px rgba(255, 69, 0, 0.3)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.target.style.transform = 'translateY(0)';
+                      e.target.style.boxShadow = 'none';
                     }}
                   >
                     Send Message
@@ -1546,48 +2338,42 @@ export default function DanielsCohrLanding() {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 border-top border-light border-opacity-25">
-        <div className="container mx-auto px-6">
+      <footer className="py-16 border-top" style={{ borderColor: 'rgba(0, 0, 0, 0.08)' }}>
+        <div className="container mx-auto px-4">
           <div className="row align-items-center">
             <div className="col-md-6">
-              <div
-                className="fw-bold fs-4 mb-2 d-flex align-items-center gap-2"
-                style={{
-                  background: "linear-gradient(45deg, #fff, #ffe0b8)",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                  backgroundClip: "text",
-                }}
-              >
-                <div
+              <div className="d-flex align-items-center gap-3 mb-3">
+                <div 
                   className="d-flex align-items-center justify-content-center"
                   style={{
-                    width: "32px",
-                    height: "32px",
-                    background: "linear-gradient(45deg, #ff4500, #ff6b35)",
-                    borderRadius: "50%",
-                    boxShadow: "0 4px 15px rgba(255, 69, 0, 0.2)",
+                    width: '40px',
+                    height: '40px',
+                    background: 'linear-gradient(45deg, #ff4500, #ff6b35)',
+                    borderRadius: '10px'
                   }}
                 >
-                  <div
+                  <div 
                     style={{
-                      width: "16px",
-                      height: "20px",
-                      background: "white",
-                      clipPath: "polygon(50% 0%, 0% 100%, 100% 100%)",
-                      borderRadius: "0 0 50% 50%",
+                      width: '18px',
+                      height: '22px',
+                      background: 'white',
+                      clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)',
+                      borderRadius: '0 0 50% 50%'
                     }}
                   />
                 </div>
-                Daniels & Co
+                <div>
+                  <div className="fw-bold fs-5 text-dark">Daniels & Co</div>
+                  <div className="small text-muted">Human Capital Consulting</div>
+                </div>
               </div>
-              <p className="text-light small">
-                Human Capital Consulting • Inspiring Growth • Igniting Potential
+              <p className="text-muted small mb-0">
+                Inspiring Growth • Igniting Potential • Creating Sustainable Organizations
               </p>
             </div>
-            <div className="col-md-6 text-md-end">
-              <p className="text-light small mb-0">
-                © 2024 Daniels Cohr. All rights reserved.
+            <div className="col-md-6 text-md-end mt-3 mt-md-0">
+              <p className="text-muted small mb-0">
+                © 2024 Daniels & Co. All rights reserved.
               </p>
             </div>
           </div>
@@ -1595,29 +2381,22 @@ export default function DanielsCohrLanding() {
       </footer>
 
       <style jsx>{`
-        @keyframes float {
-          0%,
-          100% {
-            transform: translateY(0px) rotate(0deg);
-          }
-          50% {
-            transform: translateY(-20px) rotate(5deg);
-          }
-        }
-
-        .form-control::placeholder {
-          color: rgba(255, 255, 255, 0.6);
-        }
-
-        .form-control:focus {
-          background: rgba(255, 255, 255, 0.15) !important;
-          border-color: rgba(255, 255, 255, 0.5) !important;
-          box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.1) !important;
-          color: white !important;
-        }
-
         html {
           scroll-behavior: smooth;
+        }
+        
+        .form-control:focus {
+          border-color: #ff4500;
+          box-shadow: 0 0 0 0.2rem rgba(255, 69, 0, 0.1);
+        }
+        
+        @media (max-width: 768px) {
+          .display-1 {
+            font-size: 3rem;
+          }
+          .display-4 {
+            font-size: 2rem;
+          }
         }
       `}</style>
     </div>
